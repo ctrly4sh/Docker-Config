@@ -1,16 +1,17 @@
-const express = require("express");
+/* Dockerizing this node js server */
 
-const app = express();
+const express = require("express")
 
-const PORT = process.env.PORT || 6969;
+const PORT = process.env.PORT || 1234;
+
+const app = express()
 
 app.get("" , (req,res)=>{
     return res.json({
-        message : "Hey from server"
+        message : "Hey from docker"
     })
 })
 
 app.listen(PORT , ()=>{
-    console.log(`Hey from server on ${PORT}`);
-})
-
+    console.log(`Server started on PORT ${PORT}`);
+}) 
